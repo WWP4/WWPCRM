@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Playground Project HQ – Free CRM for Every Playground</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      margin: 0;
+      background: #101014;
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+    }
+    .hero {
+      min-height: 60vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: linear-gradient(135deg, #002D72 60%, #4EC6FF 100%);
+      padding: 96px 16px 64px 16px;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 24px;
+      letter-spacing: -2px;
+    }
+    .hero p {
+      font-size: 1.4rem;
+      margin-bottom: 32px;
+      color: #f3f6fa;
+    }
+    .cta-btn {
+      background: #fff;
+      color: #002D72;
+      font-weight: 700;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 10px;
+      padding: 18px 40px;
+      box-shadow: 0 2px 18px rgba(0,0,0,0.10);
+      cursor: pointer;
+      transition: transform 0.18s, box-shadow 0.18s;
+    }
+    .cta-btn:hover {
+      transform: translateY(-2px) scale(1.035);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    }
+    .features {
+      max-width: 900px;
+      margin: 60px auto 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 40px;
+      padding: 0 16px;
+    }
+    .feature-card {
+      background: rgba(255,255,255,0.04);
+      border-radius: 18px;
+      padding: 40px 28px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      text-align: left;
+      border: 1px solid rgba(78,198,255,0.08);
+      min-height: 220px;
+    }
+    .feature-card h3 {
+      color: #4EC6FF;
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+    .feature-card p {
+      color: #e7edf5;
+      font-size: 1.04rem;
+    }
+    .how-it-works {
+      max-width: 780px;
+      margin: 80px auto 0;
+      background: rgba(255,255,255,0.03);
+      border-radius: 18px;
+      padding: 42px 24px 28px 24px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      text-align: center;
+    }
+    .how-it-works h2 {
+      color: #fff;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+    .steps {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      justify-content: center;
+    }
+    .step {
+      background: #002D72;
+      color: #fff;
+      padding: 30px 26px;
+      border-radius: 12px;
+      min-width: 180px;
+      font-size: 1.13rem;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+      margin-bottom: 14px;
+      font-weight: 600;
+    }
+    .credibility {
+      margin: 84px auto 0;
+      max-width: 800px;
+      padding: 0 16px;
+      text-align: center;
+    }
+    .credibility h3 {
+      color: #4EC6FF;
+      font-size: 1.45rem;
+      margin-bottom: 16px;
+      font-weight: 700;
+    }
+    .credibility p {
+      color: #dbe9fc;
+      font-size: 1.07rem;
+    }
+    .footer {
+      margin: 68px auto 0;
+      padding: 18px 0;
+      text-align: center;
+      color: #b1c8e7;
+      font-size: 1.07rem;
+      border-top: 1px solid #263d60;
+      background: #14182b;
+    }
+    @media (max-width: 700px) {
+      .hero h1 { font-size: 2.1rem; }
+      .feature-card { padding: 28px 12px; }
+      .how-it-works { padding: 18px 4px; }
+      .step { min-width: 120px; padding: 20px 7px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <h1>The Playground Project HQ</h1>
+    <p>Plan, fund, and launch your next playground—faster, smarter, and stress-free.<br/>Free CRM for every playground project. All brands welcome.</p>
+    <button class="cta-btn">Get Started Free</button>
+    <div style="margin-top: 28px; font-size: 1rem; color: #e0e6f8; opacity: 0.7;">
+      <span>Trusted by schools, churches & communities nationwide</span>
+    </div>
+  </div>
+
+  <div class="features">
+    <div class="feature-card">
+      <h3>All-in-One Project Dashboard</h3>
+      <p>Manage every detail—timeline, tasks, files, and approvals—in one sleek workspace built for teams and boards.</p>
+    </div>
+    <div class="feature-card">
+      <h3>AI Grant & Proposal Writer</h3>
+      <p>Draft perfect grant applications, letters, and board presentations with just a click. Save hours. Win more funding.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Board & Team Chat</h3>
+      <p>Centralized, secure chat for your entire team, board, and partners. Keep every message and document in one place.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Installer & Vendor Finder</h3>
+      <p>Find certified playground installers, vendors, and financing in your area. Invite anyone to join your project.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Buyer's Guides & Planning Tools</h3>
+      <p>Download ready-to-use guides, checklists, and calculators. Built-in expert advice, always up to date.</p>
+    </div>
+    <div class="feature-card">
+      <h3>All Brands, All Projects</h3>
+      <p>No matter where you buy—our platform helps every school, church, city, and buyer bring their playground vision to life.</p>
+    </div>
+  </div>
+
+  <div class="how-it-works">
+    <h2>How It Works</h2>
+    <div class="steps">
+      <div class="step">1. Start Your Project<br/><span style="font-weight:400; font-size:1rem;">(Sign up free)</span></div>
+      <div class="step">2. Invite Team & Board</div>
+      <div class="step">3. Plan, Fund, & Chat</div>
+      <div class="step">4. Launch Your Playground!</div>
+    </div>
+  </div>
+
+  <div class="credibility">
+    <h3>Real Stories</h3>
+    <p>“Our school board finished our project 2x faster using this platform. Everyone was in sync, and our grant got approved!”<br/><br/>“Game-changer for our city’s playground upgrade. We’ll use it for every future project.”</p>
+  </div>
+
+  <div class="footer">
+    <span>Powered by Wonder World Playsets &mdash; <a href="https://wonderworldplaysets.com" style="color:#4EC6FF;text-decoration:none;">See our latest offers</a></span>
+  </div>
+</body>
+</html>
