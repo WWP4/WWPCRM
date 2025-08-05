@@ -9,6 +9,81 @@
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css"/>
   <style>
+
+    .navbar {
+  width: 100%;
+  background: #002D72;
+  box-shadow: 0 4px 24px rgba(0,45,114,0.07);
+  position: fixed;
+  top: 0; left: 0; z-index: 100;
+  min-height: 74px;
+}
+.nav-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 74px;
+  padding: 0 32px;
+}
+.nav-logo {
+  height: 42px;
+  width: auto;
+  display: block;
+  filter: drop-shadow(0 1px 8px rgba(78,198,255,0.12));
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 38px;
+  margin: 0;
+  padding: 0;
+}
+.nav-links li a {
+  color: #f3f6fa;
+  font-weight: 600;
+  font-size: 1.08rem;
+  text-decoration: none;
+  padding: 9px 6px;
+  border-radius: 8px;
+  transition: background .19s, color .17s;
+}
+.nav-links li a:hover {
+  background: #4EC6FF;
+  color: #002D72;
+}
+.nav-cta {
+  background: #4EC6FF;
+  color: #002D72;
+  font-weight: 800;
+  padding: 12px 30px;
+  border-radius: 14px;
+  font-size: 1.09rem;
+  text-decoration: none;
+  margin-left: 24px;
+  transition: background .17s, color .17s, box-shadow .16s;
+  box-shadow: 0 3px 12px rgba(78,198,255,0.10);
+}
+.nav-cta:hover {
+  background: #fff;
+  color: #002D72;
+}
+@media (max-width: 900px) {
+  .nav-inner { padding: 0 10px; }
+  .nav-links { gap: 16px; }
+  .nav-cta { padding: 10px 20px; font-size: 1rem; }
+}
+@media (max-width: 700px) {
+  .nav-inner { flex-direction: column; height: auto; gap: 9px; }
+  .nav-links { flex-direction: column; gap: 0; margin-top: 8px; }
+  .nav-cta { margin-left: 0; margin-top: 9px; }
+}
+body {
+  padding-top: 74px; /* Offset for fixed navbar */
+}
+
+    
     body {
       background: #f3f6fa;
     }
@@ -244,6 +319,22 @@
   </style>
 </head>
 <body>
+  <nav class="navbar">
+  <div class="nav-inner">
+    <a href="/" class="logo-link">
+      <!-- Use your real SVG/logo image below; here’s a Wonder World-style globe as a placeholder -->
+      <img src="your-logo.svg" alt="Wonder World Playsets" class="nav-logo"/>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#features">Features</a></li>
+      <li><a href="#howitworks">How It Works</a></li>
+      <li><a href="#stories">Stories</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#get-started" class="nav-cta">Get Started</a>
+  </div>
+</nav>
+
 
   <!-- VIDEO HERO SECTION -->
   <div class="hero-video-bg">
