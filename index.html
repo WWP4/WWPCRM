@@ -7,300 +7,70 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"/>
   <!-- AOS CSS -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
   <style>
-    :root {
-      --blue: #4EC6FF;       /* Use ONLY for accent/outlines */
-      --blue-dark: #002D72;  /* Primary strong color */
-      --white: #fff;
-      --gray: #f3f6fa;       /* Section background */
-      --border: #e0e6ef;
-      --radius: 20px;
-      --shadow: 0 6px 28px rgba(0,45,114,0.06);
-      --transition: all 0.2s cubic-bezier(.45,.1,.22,1);
-    }
-
-    body {
-      margin: 0;
-      background: var(--white);
-      color: var(--blue-dark);
-      font-family: 'Inter', 'Segoe UI', 'Arial', sans-serif;
-      line-height: 1.6;
-      font-size: 1.06rem;
-    }
-
-    .hero {
-      min-height: 60vh;
+    .hero-video-bg {
+      position: relative;
+      min-height: 70vh;
+      width: 100vw;
+      overflow: hidden;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
-      text-align: center;
-      background: var(--white);
-      padding: 100px 20px 70px;
-      border-bottom: 1.5px solid var(--border);
     }
-
-    .hero h1 {
+    .hero-video {
+      position: absolute;
+      width: 100vw;
+      height: 100%;
+      left: 0; top: 0;
+      object-fit: cover;
+      z-index: 1;
+      min-height: 70vh;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      text-align: center;
+      color: #fff;
+      width: 100%;
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 90px 24px 80px 24px;
+    }
+    .hero-content h1 {
+      color: #fff;
       font-size: 3.2rem;
-      font-weight: 700;
-      color: var(--blue-dark);
-      margin-bottom: 22px;
-      letter-spacing: -2px;
+      text-shadow: 0 2px 20px rgba(0,0,0,0.15);
     }
-
-    .hero p {
+    .hero-content p {
+      color: #f3f6fa;
       font-size: 1.33rem;
-      color: #445877;
-      margin-bottom: 30px;
+      text-shadow: 0 2px 20px rgba(0,0,0,0.14);
     }
-
-    .cta-btn {
-      background: var(--blue-dark);
-      color: var(--white);
-      font-weight: 700;
-      font-size: 1.17rem;
-      border: none;
-      border-radius: var(--radius);
-      padding: 16px 42px;
-      box-shadow: var(--shadow);
-      cursor: pointer;
-      transition: var(--transition);
-      letter-spacing: 0.04em;
-    }
-
-    .cta-btn:hover {
-      background: var(--blue);
-      color: var(--blue-dark);
-      transform: translateY(-2px) scale(1.035);
-      box-shadow: 0 12px 34px rgba(0,45,114,0.13);
-    }
-
-    .trusted {
-      margin-top: 28px;
-      font-size: 1rem;
-      color: #7a97c7;
-      opacity: 0.8;
-      letter-spacing: .07em;
-    }
-
-    .features {
-      max-width: 1100px;
-      margin: 68px auto 0;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(295px, 1fr));
-      gap: 44px;
-      padding: 0 18px;
-    }
-
-    .feature-card {
-      background: var(--white);
-      border-radius: var(--radius);
-      padding: 48px 30px;
-      box-shadow: var(--shadow);
-      border: 1.8px solid var(--border);
-      text-align: left;
-      transition: var(--transition);
-      min-height: 215px;
-      position: relative;
-    }
-
-    .feature-card:hover {
-      border: 1.8px solid var(--blue);
-      box-shadow: 0 8px 44px rgba(78,198,255,0.13);
-      z-index: 2;
-    }
-
-    .feature-card h3 {
-      color: var(--blue-dark);
-      font-size: 1.23rem;
-      margin-bottom: 12px;
-      font-weight: 700;
-    }
-
-    .feature-card p {
-      color: #234;
-      font-size: 1.09rem;
-      margin-bottom: 0;
-    }
-
-    .feature-card::before {
-      content: "";
-      display: block;
-      width: 38px;
-      height: 3.6px;
-      background: var(--blue);
-      border-radius: 2px;
-      position: absolute;
-      top: 24px;
-      left: 30px;
-      opacity: 0.24;
-    }
-
-    .how-it-works {
-      max-width: 820px;
-      margin: 90px auto 0;
-      background: var(--gray);
-      border-radius: var(--radius);
-      padding: 52px 30px 36px 30px;
-      box-shadow: var(--shadow);
-      text-align: center;
-      border: 1.5px solid var(--border);
-    }
-
-    .how-it-works h2 {
-      color: var(--blue-dark);
-      font-size: 2.1rem;
-      font-weight: 700;
-      margin-bottom: 26px;
-    }
-
-    .steps {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 24px;
-      justify-content: center;
-      margin-top: 18px;
-    }
-
-    .step {
-      background: var(--white);
-      color: var(--blue-dark);
-      padding: 33px 30px;
-      border-radius: 12px;
-      min-width: 180px;
-      font-size: 1.15rem;
-      font-weight: 600;
-      box-shadow: var(--shadow);
-      border: 1.7px solid var(--blue-dark);
-      position: relative;
-      transition: var(--transition);
-    }
-
-    .step::before {
-      content: "";
-      display: block;
-      width: 22px;
-      height: 3.2px;
-      background: var(--blue);
-      border-radius: 2px;
-      position: absolute;
-      top: 21px;
-      left: 30px;
-      opacity: 0.2;
-    }
-
-    .credibility {
-      margin: 92px auto 0;
-      max-width: 800px;
-      padding: 0 16px;
-      text-align: center;
-    }
-
-    .credibility h3 {
-      color: var(--blue-dark);
-      font-size: 1.27rem;
-      margin-bottom: 16px;
-      font-weight: 700;
-      letter-spacing: 0.01em;
-    }
-
-    .credibility p {
-      color: #5d7292;
-      font-size: 1.1rem;
-      line-height: 1.7;
-    }
-
-    .footer {
-      margin: 75px auto 0;
-      padding: 22px 0;
-      text-align: center;
-      color: var(--blue);
-      font-size: 1.1rem;
-      border-top: 1.5px solid var(--border);
-      background: #f8fbff;
-    }
-
-    .footer a {
-      color: var(--blue-dark);
-      text-decoration: underline;
-      font-weight: 600;
-    }
-
+    .cta-btn { margin-top: 24px; }
     @media (max-width: 700px) {
-      .hero h1 { font-size: 2rem; }
-      .feature-card, .how-it-works { padding: 18px 8px; }
-      .step { min-width: 120px; padding: 16px 7px; }
+      .hero-content h1 { font-size: 2rem; }
     }
-
-.hero-video-bg {
-  position: relative;
-  min-height: 70vh;
-  width: 100vw;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.hero-video {
-  position: absolute;
-  width: 100vw;
-  height: 100%;
-  left: 0; top: 0;
-  object-fit: cover;
-  z-index: 1;
-  min-height: 70vh;
-}
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.12); /* adjust the 0.12 for stronger/weaker effect */
-  z-index: 2;
-}
-.hero-content {
-  position: relative;
-  z-index: 3;
-  text-align: center;
-  color: #fff;
-  width: 100%;
-  max-width: 740px;
-  margin: 0 auto;
-  padding: 90px 24px 80px 24px;
-}
-.hero-content h1 { color: #fff; font-size: 3.2rem; }
-.hero-content p { color: #f3f6fa; font-size: 1.33rem; }
-.cta-btn { margin-top: 24px; }
-@media (max-width: 700px) {
-  .hero-content h1 { font-size: 2rem; }
-}
-
-    
   </style>
 </head>
 <body>
 
-<div class="hero-video-bg">
-  <video autoplay loop muted playsinline class="hero-video">
-    <source src="hero-bg.mp4" type="video/mp4">
-  </video>
-  <!-- (You can keep or remove the overlay as you prefer) -->
-  <div class="hero-content">
-    <h1>Playground Project HQ</h1>
-    <p>Plan, fund, and launch your next playground—faster, smarter, and stress-free.<br/>Free CRM for every playground project. All brands welcome.</p>
-    <button class="cta-btn">Get Started Free</button>
-  </div>
-</div>
-
-
-  
-  <div class="hero" data-aos="fade-down">
-    <h1>The Playground Project HQ</h1>
-    <p>Plan, fund, and launch your next playground—faster, smarter, and stress-free.<br/>Free CRM for every playground project. All brands welcome.</p>
-    <button class="cta-btn" data-aos="fade-up" data-aos-delay="200">Get Started Free</button>
-    <div class="trusted" data-aos="fade-up" data-aos-delay="300">
-      Trusted by schools, churches & communities nationwide
+  <!-- VIDEO HERO SECTION -->
+  <div class="hero-video-bg">
+    <video autoplay loop muted playsinline class="hero-video">
+      <source src="hero-bg.mp4" type="video/mp4">
+    </video>
+    <div class="hero-content">
+      <h1>Playground Project HQ</h1>
+      <p>
+        Plan, fund, and launch your next playground—faster, smarter, and stress-free.<br/>
+        Free CRM for every playground project. All brands welcome.
+      </p>
+      <button class="cta-btn">Get Started Free</button>
     </div>
   </div>
 
+  <!-- FEATURES -->
   <div class="features">
     <div class="feature-card" data-aos="fade-right">
       <h3>All-in-One Project Dashboard</h3>
@@ -328,6 +98,7 @@
     </div>
   </div>
 
+  <!-- HOW IT WORKS -->
   <div class="how-it-works" data-aos="fade-up" data-aos-delay="100">
     <h2>How It Works</h2>
     <div class="steps">
@@ -338,11 +109,16 @@
     </div>
   </div>
 
+  <!-- CREDIBILITY -->
   <div class="credibility" data-aos="fade-up" data-aos-delay="200">
     <h3>Real Stories</h3>
-    <p>“Our school board finished our project 2x faster using this platform. Everyone was in sync, and our grant got approved!”<br/><br/>“Game-changer for our city’s playground upgrade. We’ll use it for every future project.”</p>
+    <p>
+      “Our school board finished our project 2x faster using this platform. Everyone was in sync, and our grant got approved!”<br/><br/>
+      “Game-changer for our city’s playground upgrade. We’ll use it for every future project.”
+    </p>
   </div>
 
+  <!-- FOOTER -->
   <div class="footer" data-aos="fade-up" data-aos-delay="300">
     Powered by Wonder World Playsets &mdash; <a href="https://wonderworldplaysets.com">See our latest offers</a>
   </div>
