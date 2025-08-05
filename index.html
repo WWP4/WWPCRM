@@ -231,6 +231,49 @@
       .feature-card, .how-it-works { padding: 18px 8px; }
       .step { min-width: 120px; padding: 16px 7px; }
     }
+
+.hero-video-bg {
+  position: relative;
+  min-height: 70vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-video {
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  left: 0; top: 0;
+  object-fit: cover;
+  z-index: 1;
+  min-height: 70vh;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,45,114,0.58) 0%, rgba(0,45,114,0.16) 50%, rgba(255,255,255,0.96) 100%);
+  z-index: 2;
+}
+.hero-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  max-width: 740px;
+  margin: 0 auto;
+  padding: 90px 24px 80px 24px;
+}
+.hero-content h1 { color: #fff; font-size: 3.2rem; }
+.hero-content p { color: #f3f6fa; font-size: 1.33rem; }
+.cta-btn { margin-top: 24px; }
+@media (max-width: 700px) {
+  .hero-content h1 { font-size: 2rem; }
+}
+
+    
   </style>
 </head>
 <body>
